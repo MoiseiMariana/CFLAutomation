@@ -19,4 +19,13 @@ public class PackagesPageStepDefs {
         packagesPage.clickOnContinue();
     }
 
+    @And("select one {string}")
+    public void selectOneBBCard(String arg0) {
+        packagesPage.selectBBCard(arg0);
+    }
+
+    @And("select twelve months")
+    public void selectTwelveMonths() {
+        packagesPage.clickOnTwelveMonthsButton();
+    }
 }
