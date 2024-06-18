@@ -4,11 +4,10 @@ Feature: Place an order with CFL address
   Scenario Outline: Place an order journey(without clicking on place order button)
     Given open application
     When accept cookies
+    And Click check Availability for twelve months BB card
     When enter "<address>"
     And click on address
-    And select BB card One Gb Fibre Broadband
     And click on Continue
-    And add extras Calls
     And click on Go to checkout
     And enter "Mariana" First Name
     And enter "Test" Last Name
@@ -25,8 +24,10 @@ Feature: Place an order with CFL address
     And click on Proceed to Order Summary
     Then is displayed place order button
 
+
     Examples:
-      | address                            |
-      | 1 Vancouver Road, London, SE23 2AG |
+      | address                                     | BBcard_12months            |
+      | 1 Vancouver Road, London, SE23 2AG          | RES_BB12_STD_150MB_27_SU0  |
+      | 8 Watermill Close, Bexhill-On-Sea, TN39 5EJ | RES_BB12_AFF_1000MB_32_SU0 |
 
 

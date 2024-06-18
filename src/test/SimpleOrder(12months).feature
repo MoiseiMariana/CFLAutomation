@@ -6,9 +6,9 @@ Feature: Place an order with CFL address
     When accept cookies
     When enter "<address>"
     And click on address
-    And select BB card One Gb Fibre Broadband
+    And select twelve months
+    And select one "<BBcard_12months>"
     And click on Continue
-    And add extras TV
     And click on Go to checkout
     And enter "Mariana" First Name
     And enter "Test" Last Name
@@ -25,10 +25,10 @@ Feature: Place an order with CFL address
     And click on Proceed to Order Summary
     Then is displayed place order button
 
-    Examples:
-      | address                                     |
-      | 1 Vancouver Road, London, SE23 2AG          |
-      | 8 Watermill Close, Bexhill-On-Sea, TN39 5EJ |
 
+    Examples:
+      | address                                     | BBcard_12months            |
+      | 1 Vancouver Road, London, SE23 2AG          | RES_BB12_STD_150MB_27_SU0  |
+      | 8 Watermill Close, Bexhill-On-Sea, TN39 5EJ | RES_BB12_AFF_1000MB_32_SU0 |
 
 

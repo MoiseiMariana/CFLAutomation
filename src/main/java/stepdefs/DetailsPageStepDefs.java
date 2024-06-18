@@ -4,6 +4,8 @@ import io.cucumber.java.en.And;
 import pages.DetailsPage;
 import pages.ExtrasPage;
 
+import static com.codeborne.selenide.Selenide.sleep;
+
 public class DetailsPageStepDefs {
     DetailsPage detailsPage = new DetailsPage();
     @And("enter {string} First Name")
@@ -34,4 +36,13 @@ public class DetailsPageStepDefs {
         detailsPage.clickOnNext();
     }
 
+    @And("click on Extras")
+    public void clickOnExtras() {
+        detailsPage.clickOnExtrasButton();
+    }
+
+    @And("click on Back to Packages")
+    public void clickOnBackToPackages() {
+        detailsPage.clickBackToPackages();
+    }
 }
